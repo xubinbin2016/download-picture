@@ -1,0 +1,13 @@
+[
+    {
+        "id":1,
+        "priority":1,
+        "action":{
+            "type":"allow"
+        },
+        "condition":{
+            "urlFilter":"https://h5.qzone.qq.com/proxy/domain/photo.qzone.qq.com/fcgi-bin/cgi_list_photo*",
+            "resourceTypes":["script"]
+        }
+    }
+]
