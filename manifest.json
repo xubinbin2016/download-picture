@@ -4,8 +4,7 @@
   "description": "下载qq空间图片",
   "version": "1.0",
   "action": {
-    "default_icon": "assets/icon.png",
-    "default_popup": "popup.html"
+    "default_icon": "assets/icon.png"
   },
   "background": {
     "service_worker": "background.js"
@@ -17,7 +16,8 @@
     "declarativeNetRequestFeedback"
   ],
   "host_permissions": [
-    "https://h5.qzone.qq.com/*"
+    "https://h5.qzone.qq.com/*",
+    "https://user.qzone.qq.com/*"
   ],
   "declarative_net_request": {
     "rule_resources": [
@@ -29,5 +29,17 @@
     ]
   },
   "content_scripts": [
+    {
+      "matches": [
+        "https://h5.qzone.qq.com/*",
+        "https://user.qzone.qq.com/*"
+      ],
+      "js": [
+        "jszip.js",
+        "FileSaver.js",
+        "axios.js",
+        "contentScript.js"
+      ]
+    }
   ]
 }
